@@ -5,7 +5,16 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="main">
+      <sprite>sprites\s_main_jump</sprite>
+      <sprite>sprites\s_main_run</sprite>
+      <sprite>sprites\s_main_idle</sprite>
+      <sprite>sprites\s_main_hit</sprite>
+      <sprite>sprites\s_main_fall</sprite>
+      <sprite>sprites\s_main_doublejump</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background">
     <background>background\bg_tile</background>
     <background>background\bg_main</background>
