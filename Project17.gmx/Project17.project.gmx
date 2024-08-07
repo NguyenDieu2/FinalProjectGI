@@ -8,12 +8,13 @@
   <sprites name="sprites">
     <sprites name="main">
       <sprite>sprites\s_main_jump</sprite>
-      <sprite>sprites\s_main_run</sprite>
+      <sprite>sprites\s_main_move</sprite>
       <sprite>sprites\s_main_idle</sprite>
       <sprite>sprites\s_main_hit</sprite>
       <sprite>sprites\s_main_fall</sprite>
       <sprite>sprites\s_main_doublejump</sprite>
     </sprites>
+    <sprite>sprites\s_ground</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tile</background>
@@ -21,6 +22,18 @@
     <background>background\bg_gui</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_input.gml</script>
+    <script>scripts\scr_idle.gml</script>
+    <script>scripts\scr_move.gml</script>
+    <script>scripts\scr_jump.gml</script>
+    <script>scripts\scr_hit.gml</script>
+    <script>scripts\scr_doublejump.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\o_main</object>
+    <object>objects\o_ground</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
