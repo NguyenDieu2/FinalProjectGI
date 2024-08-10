@@ -9,8 +9,7 @@ if (input_left or input_right) {
 } else if (input_jump) {
     moveY = -10
     state = player_states.jump
-} else if (input_doublejump) {
-    state = player_states.doublejump
-}
+} 
+  
   
 moveX = 0

@@ -31,13 +31,12 @@ enum player_states {
      idle, 
      move,
      jump,  
-     doublejump, 
      hit,
      fall,
 }
 
 //movement
-grav = 0.6;
+grav = 0.55;
 moveX = 0;
 moveY = 0;
 nor_spd = 3;
@@ -79,9 +78,6 @@ switch (state) {
             break;  
     case (player_states.jump):
             scr_jump();
-            break;
-    case (player_states.attack):
-            scr_doublejump();
             break;
 }
 

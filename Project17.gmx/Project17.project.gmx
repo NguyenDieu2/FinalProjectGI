@@ -14,7 +14,36 @@
       <sprite>sprites\s_main_fall</sprite>
       <sprite>sprites\s_main_doublejump</sprite>
     </sprites>
+    <sprites name="enemy1">
+      <sprite>sprites\s_1_jump</sprite>
+      <sprite>sprites\s_1_fall</sprite>
+      <sprite>sprites\s_1_hit</sprite>
+      <sprite>sprites\s_1_run</sprite>
+      <sprite>sprites\s_1_idle</sprite>
+    </sprites>
+    <sprites name="enemy2">
+      <sprite>sprites\s_2_hit</sprite>
+      <sprite>sprites\s_2_run</sprite>
+      <sprite>sprites\s_2_idle</sprite>
+      <sprite>sprites\s_2j_jump</sprite>
+      <sprite>sprites\s_2_fall</sprite>
+    </sprites>
+    <sprites name="enemy3">
+      <sprite>sprites\s_3_hit</sprite>
+      <sprite>sprites\s_3_attack</sprite>
+      <sprite>sprites\s_3_fly</sprite>
+      <sprite>sprites\s_3_idle</sprite>
+    </sprites>
+    <sprite>sprites\s_box_3</sprite>
+    <sprite>sprites\s_wall</sprite>
+    <sprite>sprites\s_trap_1</sprite>
+    <sprite>sprites\s_trap_2</sprite>
+    <sprite>sprites\s_trap_3</sprite>
+    <sprite>sprites\s_trap_4</sprite>
+    <sprite>sprites\s_trap_5</sprite>
+    <sprite>sprites\s_trap_6</sprite>
     <sprite>sprites\s_ground</sprite>
+    <sprite>sprites\s_pointer</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tile</background>
@@ -28,11 +57,24 @@
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_jump.gml</script>
     <script>scripts\scr_hit.gml</script>
-    <script>scripts\scr_doublejump.gml</script>
   </scripts>
   <objects name="objects">
+    <objects name="enemy">
+      <object>objects\o_1</object>
+      <object>objects\o_3</object>
+      <object>objects\o_2</object>
+    </objects>
     <object>objects\o_main</object>
     <object>objects\o_ground</object>
+    <object>objects\o_box_3</object>
+    <object>objects\o_wall</object>
+    <object>objects\o_trap_5</object>
+    <object>objects\o_trap_6</object>
+    <object>objects\o_trap_4</object>
+    <object>objects\o_trap_3</object>
+    <object>objects\o_trap_2</object>
+    <object>objects\o_trap_1</object>
+    <object>objects\o_pointer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
