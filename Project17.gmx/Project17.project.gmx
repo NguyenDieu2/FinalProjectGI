@@ -44,11 +44,15 @@
     <sprite>sprites\s_trap_6</sprite>
     <sprite>sprites\s_ground</sprite>
     <sprite>sprites\s_pointer</sprite>
+    <sprite>sprites\s_gem</sprite>
+    <sprite>sprites\s_box</sprite>
+    <sprite>sprites\s_box_1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tile</background>
     <background>background\bg_main</background>
     <background>background\bg_gui</background>
+    <background>background\_bg__main1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -75,8 +79,12 @@
     <object>objects\o_trap_2</object>
     <object>objects\o_trap_1</object>
     <object>objects\o_pointer</object>
+    <object>objects\o_gem</object>
+    <object>objects\o_box</object>
+    <object>objects\o_box_1</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

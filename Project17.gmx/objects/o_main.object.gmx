@@ -45,6 +45,9 @@ count = 0;
 
 // Init state
 state = player_states.idle
+
+//Health
+health = 10
 </string>
           </argument>
         </arguments>
