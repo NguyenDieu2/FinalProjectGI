@@ -1,4 +1,4 @@
-scr_input();
+ scr_input();
 
 sprite_index = s_main_jump
 if (place_meeting(x, y + moveY, o_ground)) {
@@ -15,4 +15,5 @@ if (place_meeting(x, y + moveY, o_ground)) {
 
 if (input_right or input_left) {
     moveX = (input_right - input_left)*nor_spd
-}
+}  
+

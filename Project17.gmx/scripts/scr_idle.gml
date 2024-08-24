@@ -2,7 +2,7 @@ scr_input();
 
 // set sprite
 sprite_index = s_main_idle
-image_speed = 4 / room_speed
+image_speed = 1
 
 if (input_left or input_right) {
     state = player_states.move

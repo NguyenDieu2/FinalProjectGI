@@ -34,19 +34,33 @@
       <sprite>sprites\s_3_fly</sprite>
       <sprite>sprites\s_3_idle</sprite>
     </sprites>
-    <sprite>sprites\s_box_3</sprite>
-    <sprite>sprites\s_wall</sprite>
-    <sprite>sprites\s_trap_1</sprite>
-    <sprite>sprites\s_trap_2</sprite>
-    <sprite>sprites\s_trap_3</sprite>
-    <sprite>sprites\s_trap_4</sprite>
-    <sprite>sprites\s_trap_5</sprite>
-    <sprite>sprites\s_trap_6</sprite>
-    <sprite>sprites\s_ground</sprite>
+    <sprites name="block">
+      <sprite>sprites\s_ground_main</sprite>
+      <sprite>sprites\s_dmg</sprite>
+      <sprite>sprites\s_wall</sprite>
+      <sprite>sprites\s_wall_3</sprite>
+    </sprites>
+    <sprites name="trap">
+      <sprite>sprites\s_trap_1</sprite>
+      <sprite>sprites\s_trap_2_collapse</sprite>
+      <sprite>sprites\s_trap_2</sprite>
+      <sprite>sprites\s_trap_3</sprite>
+      <sprite>sprites\s_trap_4</sprite>
+      <sprite>sprites\s_trap_5</sprite>
+      <sprite>sprites\s_trap_6</sprite>
+    </sprites>
+    <sprites name="box">
+      <sprite>sprites\s_box</sprite>
+      <sprite>sprites\s_box_1</sprite>
+      <sprite>sprites\s_box_2</sprite>
+      <sprite>sprites\s_box_break</sprite>
+    </sprites>
+    <sprite>sprites\s_cup</sprite>
     <sprite>sprites\s_pointer</sprite>
     <sprite>sprites\s_gem</sprite>
-    <sprite>sprites\s_box</sprite>
-    <sprite>sprites\s_box_1</sprite>
+    <sprite>sprites\s_checkpoint</sprite>
+    <sprite>sprites\s_start_checkpoint</sprite>
+    <sprite>sprites\s_ground</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tile</background>
@@ -61,31 +75,47 @@
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_jump.gml</script>
     <script>scripts\scr_hit.gml</script>
+    <script>scripts\scr_doublejump.gml</script>
+    <script>scripts\scr_attack.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\o_main</object>
     <objects name="enemy">
       <object>objects\o_1</object>
-      <object>objects\o_3</object>
       <object>objects\o_2</object>
+      <object>objects\o_3</object>
     </objects>
-    <object>objects\o_main</object>
-    <object>objects\o_ground</object>
-    <object>objects\o_box_3</object>
-    <object>objects\o_wall</object>
-    <object>objects\o_trap_5</object>
-    <object>objects\o_trap_6</object>
-    <object>objects\o_trap_4</object>
-    <object>objects\o_trap_3</object>
-    <object>objects\o_trap_2</object>
-    <object>objects\o_trap_1</object>
-    <object>objects\o_pointer</object>
+    <objects name="trap">
+      <object>objects\o_trap_1</object>
+      <object>objects\o_trap_2</object>
+      <object>objects\o_trap_3</object>
+      <object>objects\o_trap_4</object>
+      <object>objects\o_trap_5</object>
+      <object>objects\o_trap_6</object>
+    </objects>
+    <objects name="block">
+      <object>objects\o_wall</object>
+      <object>objects\o_dmg</object>
+      <object>objects\o_ground_main</object>
+      <object>objects\o_trap_2_collapse</object>
+      <object>objects\o_ground</object>
+      <object>objects\o_ground_3</object>
+      <object>objects\o_wall_3</object>
+    </objects>
+    <objects name="box">
+      <object>objects\o_box</object>
+      <object>objects\o_box_1</object>
+      <object>objects\o_box_3</object>
+    </objects>
     <object>objects\o_gem</object>
-    <object>objects\o_box</object>
-    <object>objects\o_box_1</object>
+    <object>objects\o_pointer</object>
+    <object>objects\o_checkpoint</object>
+    <object>objects\o_start_checkpoint</object>
+    <object>objects\o_checkpoint_col</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
