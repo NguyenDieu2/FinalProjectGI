@@ -48,9 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if x &gt; o_checkpoint_col.x {
-    o_checkpoint_col.cp_x = x
-    o_checkpoint_col.cp_y = y
+            <string>if x &gt; o_checkpoint_con.x {
+    o_checkpoint_con.cp_x = x
+    o_checkpoint_con.cp_y = y
 }
 </string>
           </argument>

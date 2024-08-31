@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>grav = 0.5
-hp = 10
-hpmax = 10
 moveX = 0;
 moveY = 0;
 image_speed = 15/ room_speed

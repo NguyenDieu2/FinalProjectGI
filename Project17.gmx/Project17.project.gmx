@@ -39,6 +39,7 @@
       <sprite>sprites\s_dmg</sprite>
       <sprite>sprites\s_wall</sprite>
       <sprite>sprites\s_wall_3</sprite>
+      <sprite>sprites\s_ground</sprite>
     </sprites>
     <sprites name="trap">
       <sprite>sprites\s_trap_1</sprite>
@@ -55,12 +56,20 @@
       <sprite>sprites\s_box_2</sprite>
       <sprite>sprites\s_box_break</sprite>
     </sprites>
+    <sprites name="checkpoint">
+      <sprite>sprites\s_checkpoint</sprite>
+      <sprite>sprites\s_start_checkpoint</sprite>
+    </sprites>
+    <sprites name="enemy4">
+      <sprite>sprites\s_4_run_attack</sprite>
+      <sprite>sprites\s_4_attack</sprite>
+      <sprite>sprites\s_4_run</sprite>
+      <sprite>sprites\s_4_idle</sprite>
+    </sprites>
     <sprite>sprites\s_cup</sprite>
     <sprite>sprites\s_pointer</sprite>
     <sprite>sprites\s_gem</sprite>
-    <sprite>sprites\s_checkpoint</sprite>
-    <sprite>sprites\s_start_checkpoint</sprite>
-    <sprite>sprites\s_ground</sprite>
+    <sprite>sprites\s_dealdmg</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tile</background>
@@ -70,13 +79,20 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_input.gml</script>
-    <script>scripts\scr_idle.gml</script>
-    <script>scripts\scr_move.gml</script>
-    <script>scripts\scr_jump.gml</script>
-    <script>scripts\scr_hit.gml</script>
-    <script>scripts\scr_doublejump.gml</script>
-    <script>scripts\scr_attack.gml</script>
+    <scripts name="enemy">
+      <script>scripts\scr_4_attack.gml</script>
+      <script>scripts\scr_4_run.gml</script>
+      <script>scripts\scr_4_idle.gml</script>
+    </scripts>
+    <scripts name="main">
+      <script>scripts\scr_input.gml</script>
+      <script>scripts\scr_doublejump.gml</script>
+      <script>scripts\scr_attack.gml</script>
+      <script>scripts\scr_hit.gml</script>
+      <script>scripts\scr_jump.gml</script>
+      <script>scripts\scr_move.gml</script>
+      <script>scripts\scr_idle.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\o_main</object>
@@ -84,6 +100,7 @@
       <object>objects\o_1</object>
       <object>objects\o_2</object>
       <object>objects\o_3</object>
+      <object>objects\o_4</object>
     </objects>
     <objects name="trap">
       <object>objects\o_trap_1</object>
@@ -91,31 +108,37 @@
       <object>objects\o_trap_3</object>
       <object>objects\o_trap_4</object>
       <object>objects\o_trap_5</object>
+      <object>objects\o_trap_7</object>
       <object>objects\o_trap_6</object>
-    </objects>
-    <objects name="block">
-      <object>objects\o_wall</object>
-      <object>objects\o_dmg</object>
-      <object>objects\o_ground_main</object>
-      <object>objects\o_trap_2_collapse</object>
-      <object>objects\o_ground</object>
-      <object>objects\o_ground_3</object>
-      <object>objects\o_wall_3</object>
     </objects>
     <objects name="box">
       <object>objects\o_box</object>
       <object>objects\o_box_1</object>
       <object>objects\o_box_3</object>
     </objects>
+    <objects name="checkpoint">
+      <object>objects\o_checkpoint_con</object>
+      <object>objects\o_start_checkpoint</object>
+      <object>objects\o_checkpoint</object>
+    </objects>
+    <objects name="block">
+      <object>objects\o_wall</object>
+      <object>objects\o_ground_main</object>
+      <object>objects\o_trap_2_collapse</object>
+      <object>objects\o_ground</object>
+      <object>objects\o_ground_3</object>
+      <object>objects\o_wall_3</object>
+    </objects>
     <object>objects\o_gem</object>
+    <object>objects\object30</object>
     <object>objects\o_pointer</object>
-    <object>objects\o_checkpoint</object>
-    <object>objects\o_start_checkpoint</object>
-    <object>objects\o_checkpoint_col</object>
+    <object>objects\o_time</object>
+    <object>objects\o_score</object>
+    <object>objects\o_dealdmg</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\room1</room>
+    <room>rooms\room0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
