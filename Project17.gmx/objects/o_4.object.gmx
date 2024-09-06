@@ -28,7 +28,7 @@
             <string>enum enermy4States { 
     idle,
     run,
-    attack,
+    runattack,
     hit,
 }
 
@@ -71,7 +71,7 @@ switch (state) {
     case enermy4States.run:
         scr_4_run();
         break;
-    case enermy4States.attack:
+    case enermy4States.runattack:
         scr_4_attack();
         break;
 }

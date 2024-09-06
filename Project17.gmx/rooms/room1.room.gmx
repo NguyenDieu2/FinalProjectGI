@@ -51,7 +51,7 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="o_trap_6" x="672" y="544" name="inst_F4C088FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_trap_6" x="736" y="640" name="inst_F4C088FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_ground_main" x="192" y="384" name="inst_D2B3BA20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_ground_main" x="352" y="352" name="inst_C599DE97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_ground_main" x="320" y="352" name="inst_082A0505" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -130,17 +130,20 @@
     <instance objName="o_trap_3" x="928" y="288" name="inst_3A00EEA4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_trap_3" x="1088" y="288" name="inst_806692FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_trap_2" x="442" y="163" name="inst_66E44ADB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_checkpoint" x="961" y="130" name="inst_084081B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_checkpoint" x="1064" y="352" name="inst_855D4981" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_checkpoint" x="1088" y="128" name="inst_084081B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_checkpoint" x="832" y="288" name="inst_855D4981" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_trap_2_collapse" x="449" y="183" name="inst_3D188DD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_trap_2" x="1179" y="163" name="inst_1F5B689E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_trap_2_collapse" x="1184" y="183" name="inst_96FE85B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_checkpoint_con" x="0" y="0" name="inst_E7BD60B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_start_checkpoint" x="352" y="288" name="inst_2956FCE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_start_checkpoint" x="352" y="320" name="inst_2956FCE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_time" x="32" y="0" name="inst_1F9CA196" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_score" x="64" y="0" name="inst_42F4611C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object30" x="31" y="93" name="inst_77A2E35B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_4" x="448" y="352" name="inst_14F8E1F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_4" x="992" y="192" name="inst_14F8E1F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_trap_7" x="352" y="128" name="inst_573A32BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_2" x="1088" y="384" name="inst_7F42D85E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_win_2" x="1312" y="352" name="inst_9525DD38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="_bg__main1" x="0" y="32" w="32" h="32" xo="0" yo="0" id="10001626" name="inst_ED5641A8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

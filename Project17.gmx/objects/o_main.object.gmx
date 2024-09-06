@@ -175,7 +175,14 @@ if (y &gt; 704) {
      x = o_checkpoint_con.cp_x
     y = o_checkpoint_con.cp_y
 }
-
+ 
+//Trap
+if(place_meeting(x, y, o_trap_6)) {
+    vspeed = -2
+}
+if(!place_meeting(x, y, o_trap_6)) {
+    vspeed = 0
+}
 </string>
           </argument>
         </arguments>
@@ -223,11 +230,11 @@ if (y &gt; 704) {
             <kind>1</kind>
             <string>if (o_trap_7.image_index == 3) {
     if(damage == false) {
-        hp -= 5
+        hp -= 10
         damage = true
     }
 }
-alarm [0] = 90
+alarm [0] = 60
 </string>
           </argument>
         </arguments>
@@ -250,13 +257,12 @@ alarm [0] = 90
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (damage == false){
-    hp -= 5
+            <string>if (damage == false){
+    hp -= 10
     damage = true
  }
     
-alarm[0] = 90
+alarm[0] = 60
 </string>
           </argument>
         </arguments>
@@ -279,13 +285,41 @@ alarm[0] = 90
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (dmage == false){
+            <string>if (dmage == false){
     hp -= 5
     damage = true
     }
 
-alarm[0] = 90
+alarm[0] = 60
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="o_trap_1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (o_trap_1.image_index = 4) {
+    if (damage == false) {
+        hp -= 5
+        damage = true
+    }
+}
+alarm [0] = 60
 </string>
           </argument>
         </arguments>
@@ -308,13 +342,12 @@ alarm[0] = 90
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (damage == false){
+            <string>if (damage == false){
     hp -= 5
     damage = true
     }
 
-alarm[0] = 90
+alarm[0] = 60
 </string>
           </argument>
         </arguments>
@@ -337,13 +370,12 @@ alarm[0] = 90
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (damage == false){
+            <string>if (damage == false){
     hp -= 5
     damage = true
     }
-
-alarm[0] = 90
+    
+alarm[0] = 60
 </string>
           </argument>
         </arguments>
@@ -366,13 +398,12 @@ alarm[0] = 90
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (damage == false){
+            <string>if (damage == false){
     hp -= 5
     damage = true
 }
 
-alarm[0] = 90
+alarm[0] = 60
 </string>
           </argument>
         </arguments>

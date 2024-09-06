@@ -52,11 +52,11 @@ collapse = false
             <kind>1</kind>
             <string>if collapse {
     collapse = false
-    image_speed = 1/15
+    image_speed = 1/30
 }
 
 if image_index == 4 {
-    image_speed = 1
+    image_speed = 2
 }
 
 if image_index == 7 {

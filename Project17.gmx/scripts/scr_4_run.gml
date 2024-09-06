@@ -9,7 +9,7 @@ if (x < o_main.x) {
 }
 
 if (distance_to_object(o_main) < 10 and (y - o_main.y < 12)) {
-    state = enermy4States.attack
+    state = enermy4States.runattack
     moveX = 0
 }
 

@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="main">
       <sprite>sprites\s_main_jump</sprite>
@@ -59,23 +61,31 @@
     <sprites name="checkpoint">
       <sprite>sprites\s_checkpoint</sprite>
       <sprite>sprites\s_start_checkpoint</sprite>
+      <sprite>sprites\s_cup</sprite>
+      <sprite>sprites\s_pointer</sprite>
     </sprites>
     <sprites name="enemy4">
       <sprite>sprites\s_4_run_attack</sprite>
       <sprite>sprites\s_4_attack</sprite>
       <sprite>sprites\s_4_run</sprite>
       <sprite>sprites\s_4_idle</sprite>
+      <sprite>sprites\s_4_hit</sprite>
     </sprites>
-    <sprite>sprites\s_cup</sprite>
-    <sprite>sprites\s_pointer</sprite>
     <sprite>sprites\s_gem</sprite>
     <sprite>sprites\s_dealdmg</sprite>
+    <sprite>sprites\s_win</sprite>
+    <sprite>sprites\s_title</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tile</background>
     <background>background\bg_main</background>
     <background>background\bg_gui</background>
     <background>background\_bg__main1</background>
+    <background>background\background4</background>
+    <background>background\background5</background>
+    <background>background\background6</background>
+    <background>background\background7</background>
+    <background>background\background8</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -120,6 +130,7 @@
       <object>objects\o_checkpoint_con</object>
       <object>objects\o_start_checkpoint</object>
       <object>objects\o_checkpoint</object>
+      <object>objects\o_pointer</object>
     </objects>
     <objects name="block">
       <object>objects\o_wall</object>
@@ -129,16 +140,27 @@
       <object>objects\o_ground_3</object>
       <object>objects\o_wall_3</object>
     </objects>
-    <object>objects\o_gem</object>
-    <object>objects\object30</object>
-    <object>objects\o_pointer</object>
-    <object>objects\o_time</object>
-    <object>objects\o_score</object>
+    <objects name="gem">
+      <object>objects\o_gem</object>
+      <object>objects\object30</object>
+    </objects>
+    <objects name="control">
+      <object>objects\o_time</object>
+      <object>objects\o_score</object>
+    </objects>
     <object>objects\o_dealdmg</object>
+    <object>objects\o_win</object>
+    <object>objects\o_win_2</object>
+    <object>objects\o_title</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_menu</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>
+    <room>rooms\room_win</room>
+    <room>rooms\room_lose</room>
+    <room>rooms\room_win_2</room>
+    <room>rooms\room_lose_2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
