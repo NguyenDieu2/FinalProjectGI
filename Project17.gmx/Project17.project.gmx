@@ -4,9 +4,7 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound">
-    <sound>sound\sound0</sound>
-  </sounds>
+  <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="main">
       <sprite>sprites\s_main_jump</sprite>
@@ -65,16 +63,20 @@
       <sprite>sprites\s_pointer</sprite>
     </sprites>
     <sprites name="enemy4">
-      <sprite>sprites\s_4_run_attack</sprite>
       <sprite>sprites\s_4_attack</sprite>
       <sprite>sprites\s_4_run</sprite>
       <sprite>sprites\s_4_idle</sprite>
       <sprite>sprites\s_4_hit</sprite>
     </sprites>
     <sprite>sprites\s_gem</sprite>
-    <sprite>sprites\s_dealdmg</sprite>
+    <sprite>sprites\s_enemy_dealdmg</sprite>
     <sprite>sprites\s_win</sprite>
     <sprite>sprites\s_title</sprite>
+    <sprite>sprites\s_vitory</sprite>
+    <sprite>sprites\sprite51</sprite>
+    <sprite>sprites\s_cannon</sprite>
+    <sprite>sprites\s_setting</sprite>
+    <sprite>sprites\s_start</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tile</background>
@@ -86,6 +88,7 @@
     <background>background\background6</background>
     <background>background\background7</background>
     <background>background\background8</background>
+    <background>background\background9</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -111,6 +114,7 @@
       <object>objects\o_2</object>
       <object>objects\o_3</object>
       <object>objects\o_4</object>
+      <object>objects\o_cannon</object>
     </objects>
     <objects name="trap">
       <object>objects\o_trap_1</object>
@@ -131,6 +135,8 @@
       <object>objects\o_start_checkpoint</object>
       <object>objects\o_checkpoint</object>
       <object>objects\o_pointer</object>
+      <object>objects\o_win</object>
+      <object>objects\o_win_2</object>
     </objects>
     <objects name="block">
       <object>objects\o_wall</object>
@@ -148,15 +154,22 @@
       <object>objects\o_time</object>
       <object>objects\o_score</object>
     </objects>
-    <object>objects\o_dealdmg</object>
-    <object>objects\o_win</object>
-    <object>objects\o_win_2</object>
-    <object>objects\o_title</object>
+    <objects name="title">
+      <object>objects\o_title</object>
+      <object>objects\object34</object>
+      <object>objects\o_vitory</object>
+    </objects>
+    <objects name="button">
+      <object>objects\o_setting</object>
+      <object>objects\o_start</object>
+    </objects>
+    <object>objects\o_read_point</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>
-    <room>rooms\room1</room>
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
+    <room>rooms\room_guide</room>
     <room>rooms\room_win</room>
     <room>rooms\room_lose</room>
     <room>rooms\room_win_2</room>

@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>hp = 2
 hpmax = 2
+damage = false
 </string>
           </argument>
         </arguments>
@@ -98,9 +99,9 @@ hpmax = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 30
+            <string>alarm[0] = 15
 if (damage == false) {
-    hp -=1
+    hp -= 2
     damage = true
 }
 </string>

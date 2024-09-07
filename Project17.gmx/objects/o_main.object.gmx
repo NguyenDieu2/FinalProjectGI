@@ -188,6 +188,87 @@ if(!place_meeting(x, y, o_trap_6)) {
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="o_win_2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ini_open("data.ini");
+point = ini_read_real("data", "highscore", 0);
+point += score
+ini_write_real("data", "highscore", point);
+ini_close();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="o_win">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ini_open("data.ini");
+point = ini_read_real("data", "highscore", 0);
+point += score
+ini_write_real("data", "highscore", point);
+ini_close();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="o_cannon">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (damage == false) {
+    hp -= 10
+    damage = true
+}
+alarm[0 ] = 60
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="o_gem">
       <action>
         <libid>1</libid>
@@ -206,6 +287,53 @@ if(!place_meeting(x, y, o_trap_6)) {
           <argument>
             <kind>1</kind>
             <string>score += 1
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="o_trap_6">
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>3</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>y -= 450
 </string>
           </argument>
         </arguments>
@@ -285,7 +413,7 @@ alarm[0] = 60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (dmage == false){
+            <string>if (damage == false){
     hp -= 5
     damage = true
     }
@@ -315,7 +443,7 @@ alarm[0] = 60
             <kind>1</kind>
             <string>if (o_trap_1.image_index = 4) {
     if (damage == false) {
-        hp -= 5
+        hp -= 10
         damage = true
     }
 }
@@ -343,7 +471,7 @@ alarm [0] = 60
           <argument>
             <kind>1</kind>
             <string>if (damage == false){
-    hp -= 5
+    hp -= 10
     damage = true
     }
 

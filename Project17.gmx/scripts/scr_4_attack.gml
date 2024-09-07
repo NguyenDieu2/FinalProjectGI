@@ -1,4 +1,4 @@
-sprite_index = s_4_run_attack;
+sprite_index = s_4_attack;
 image_speed = 4/30;
 
 attackCounter += 1;
