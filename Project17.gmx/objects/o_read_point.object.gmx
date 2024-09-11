@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>ini_open("data.ini");
-// ini_write_real("data", "highscore", 0)
-global.point = ini_read_real("data", "highscore", 0);
+// ini_write_real("data", "point", 0)
+global.point = ini_read_real("data", "point", 0);
 ini_close();
 </string>
           </argument>

@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timer = 90
-alarm[0] = 30
+            <string>alarm[0] = 30
 </string>
           </argument>
         </arguments>
@@ -49,7 +48,7 @@ alarm[0] = 30
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timer -= 1
+            <string>global.time -= 1
 alarm [0] = 30
 </string>
           </argument>
@@ -73,7 +72,7 @@ alarm [0] = 30
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (timer == 0) {
+            <string>if (global.time == 0) {
     game_restart()
 }
 </string>
@@ -98,7 +97,7 @@ alarm [0] = 30
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(32, 96, "timer " + string(timer)); 
+            <string>draw_text(32, 96, "timer " + string(global.time)); 
 </string>
           </argument>
         </arguments>

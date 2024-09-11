@@ -4,7 +4,16 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sou_background</sound>
+    <sound>sound\sou_o_4</sound>
+    <sound>sound\sou_o_trap_5</sound>
+    <sound>sound\sou_o_trap_6</sound>
+    <sound>sound\sou_o_trap_1</sound>
+    <sound>sound\sou_o_trap_3</sound>
+    <sound>sound\sou_win</sound>
+    <sound>sound\sou_lose</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="main">
       <sprite>sprites\s_main_jump</sprite>
@@ -57,31 +66,76 @@
       <sprite>sprites\s_box_break</sprite>
     </sprites>
     <sprites name="checkpoint">
+      <sprite>sprites\s_win</sprite>
       <sprite>sprites\s_checkpoint</sprite>
       <sprite>sprites\s_start_checkpoint</sprite>
       <sprite>sprites\s_cup</sprite>
       <sprite>sprites\s_pointer</sprite>
     </sprites>
     <sprites name="enemy4">
+      <sprite>sprites\s_cannon</sprite>
       <sprite>sprites\s_4_attack</sprite>
       <sprite>sprites\s_4_run</sprite>
       <sprite>sprites\s_4_idle</sprite>
       <sprite>sprites\s_4_hit</sprite>
     </sprites>
-    <sprite>sprites\s_gem</sprite>
+    <sprites name="title">
+      <sprite>sprites\s_title</sprite>
+      <sprite>sprites\sprite51</sprite>
+      <sprite>sprites\s_vitory</sprite>
+    </sprites>
+    <sprites name="word">
+      <sprite>sprites\sprite65</sprite>
+      <sprite>sprites\sprite56</sprite>
+      <sprite>sprites\sprite60</sprite>
+      <sprite>sprites\sprite57</sprite>
+      <sprite>sprites\sprite58</sprite>
+      <sprite>sprites\sprite64</sprite>
+      <sprite>sprites\sprite66</sprite>
+      <sprite>sprites\sprite63</sprite>
+      <sprite>sprites\sprite61</sprite>
+      <sprite>sprites\sprite59</sprite>
+      <sprite>sprites\sprite62</sprite>
+      <sprite>sprites\sprite77</sprite>
+      <sprite>sprites\sprite82</sprite>
+      <sprite>sprites\sprite78</sprite>
+      <sprite>sprites\sprite81</sprite>
+      <sprite>sprites\sprite79</sprite>
+      <sprite>sprites\sprite94</sprite>
+      <sprite>sprites\sprite91</sprite>
+      <sprite>sprites\sprite85</sprite>
+      <sprite>sprites\sprite86</sprite>
+      <sprite>sprites\sprite87</sprite>
+    </sprites>
+    <sprites name="GUI">
+      <sprite>sprites\sprite88</sprite>
+      <sprite>sprites\sprite67</sprite>
+      <sprite>sprites\sprite69</sprite>
+      <sprite>sprites\sprite68</sprite>
+      <sprite>sprites\sprite72</sprite>
+      <sprite>sprites\sprite70</sprite>
+      <sprite>sprites\sprite71</sprite>
+      <sprite>sprites\sprite75</sprite>
+      <sprite>sprites\s</sprite>
+      <sprite>sprites\s_setting</sprite>
+      <sprite>sprites\s_start</sprite>
+      <sprite>sprites\sprite73</sprite>
+      <sprite>sprites\sprite89</sprite>
+      <sprite>sprites\sprite83</sprite>
+      <sprite>sprites\sprite90</sprite>
+      <sprite>sprites\sprite84</sprite>
+      <sprite>sprites\sprite92</sprite>
+      <sprite>sprites\sprite93</sprite>
+      <sprite>sprites\sprite96</sprite>
+      <sprite>sprites\sprite95</sprite>
+    </sprites>
     <sprite>sprites\s_enemy_dealdmg</sprite>
-    <sprite>sprites\s_win</sprite>
-    <sprite>sprites\s_title</sprite>
-    <sprite>sprites\s_vitory</sprite>
-    <sprite>sprites\sprite51</sprite>
-    <sprite>sprites\s_cannon</sprite>
-    <sprite>sprites\s_setting</sprite>
-    <sprite>sprites\s_start</sprite>
+    <sprite>sprites\s_gem</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tile</background>
-    <background>background\bg_main</background>
     <background>background\bg_gui</background>
+    <background>background\bg_main</background>
     <background>background\_bg__main1</background>
     <background>background\background4</background>
     <background>background\background5</background>
@@ -89,6 +143,18 @@
     <background>background\background7</background>
     <background>background\background8</background>
     <background>background\background9</background>
+    <background>background\background10</background>
+    <background>background\background11</background>
+    <background>background\background13</background>
+    <background>background\background15</background>
+    <background>background\background16</background>
+    <background>background\background17</background>
+    <background>background\background25</background>
+    <background>background\background26</background>
+    <background>background\background27</background>
+    <background>background\background28</background>
+    <background>background\background29</background>
+    <background>background\background21</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -152,27 +218,70 @@
     </objects>
     <objects name="control">
       <object>objects\o_time</object>
+      <object>objects\o_read_point</object>
+      <object>objects\o_setting</object>
+      <object>objects\o_menu_controller</object>
       <object>objects\o_score</object>
     </objects>
     <objects name="title">
       <object>objects\o_title</object>
-      <object>objects\object34</object>
       <object>objects\o_vitory</object>
+      <object>objects\object34</object>
+      <object>objects\object72</object>
+      <object>objects\object73</object>
     </objects>
-    <objects name="button">
-      <object>objects\o_setting</object>
-      <object>objects\o_start</object>
+    <objects name="GUI">
+      <object>objects\object57</object>
+      <object>objects\object56</object>
+      <object>objects\object55</object>
+      <object>objects\object58</object>
+      <object>objects\object59</object>
+      <object>objects\object60</object>
+      <object>objects\object74</object>
+      <object>objects\object69</object>
+      <object>objects\object62</object>
+      <object>objects\o_39</object>
+      <object>objects\o_40</object>
+      <object>objects\object43</object>
+      <object>objects\object70</object>
+      <object>objects\object75</object>
+      <object>objects\object77</object>
+      <object>objects\object78</object>
+      <object>objects\object81</object>
+      <object>objects\object82</object>
+      <object>objects\object79</object>
     </objects>
-    <object>objects\o_read_point</object>
+    <objects name="word">
+      <object>objects\object71</object>
+      <object>objects\object54</object>
+      <object>objects\object45</object>
+      <object>objects\object46</object>
+      <object>objects\object49</object>
+      <object>objects\object53</object>
+      <object>objects\object47</object>
+      <object>objects\object48</object>
+      <object>objects\object44</object>
+      <object>objects\object51</object>
+      <object>objects\object50</object>
+      <object>objects\object52</object>
+      <object>objects\object65</object>
+      <object>objects\object64</object>
+      <object>objects\object68</object>
+      <object>objects\object67</object>
+      <object>objects\object66</object>
+      <object>objects\object76</object>
+      <object>objects\object80</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>
+    <room>rooms\room12</room>
+    <room>rooms\room9</room>
+    <room>rooms\room_guide</room>
+    <room>rooms\room10</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>
-    <room>rooms\room_guide</room>
     <room>rooms\room_win</room>
-    <room>rooms\room_lose</room>
-    <room>rooms\room_win_2</room>
     <room>rooms\room_lose_2</room>
   </rooms>
   <help>

@@ -48,10 +48,6 @@ count = 0;
 // Init state
 state = player_states.idle
 
-//Health
-hp = 10
-hpmax = 10
-
 globalvar left {
     left = false
 }
@@ -82,6 +78,7 @@ y = o_start_checkpoint.y
           <argument>
             <kind>1</kind>
             <string>damage = false;
+sprite_index = s_main_idle
 </string>
           </argument>
         </arguments>
@@ -165,8 +162,8 @@ if (input_right) {
 }
 
 //Health
-if (hp == 0) {
-    hp = 10
+if (global.player_hp == 0) {
+     global.player_hp = 10
     x = o_checkpoint_con.cp_x
     y = o_checkpoint_con.cp_y
 }
@@ -183,87 +180,6 @@ if(place_meeting(x, y, o_trap_6)) {
 if(!place_meeting(x, y, o_trap_6)) {
     vspeed = 0
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="o_win_2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>ini_open("data.ini");
-point = ini_read_real("data", "highscore", 0);
-point += score
-ini_write_real("data", "highscore", point);
-ini_close();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="o_win">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>ini_open("data.ini");
-point = ini_read_real("data", "highscore", 0);
-point += score
-ini_write_real("data", "highscore", point);
-ini_close();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="o_cannon">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (damage == false) {
-    hp -= 10
-    damage = true
-}
-alarm[0 ] = 60
 </string>
           </argument>
         </arguments>
@@ -292,31 +208,101 @@ alarm[0 ] = 60
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="o_trap_6">
+    <event eventtype="4" ename="o_win_2">
       <action>
         <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>3</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
+            <kind>1</kind>
+            <string>ini_open("data.ini");
+point = ini_read_real("data", "point", 0);
+point += score
+ini_write_real("data", "point", point);
+ini_close();
+</string>
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>room_win</room>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="o_win">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ini_open("data.ini");
+point = ini_read_real("data", "point", 0);
+point += score
+ini_write_real("data", "point", point);
+ini_close();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>room_win</room>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="o_trap_6">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -335,6 +321,30 @@ alarm[0 ] = 60
             <kind>1</kind>
             <string>y -= 450
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>sou_o_trap_6</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -358,11 +368,12 @@ alarm[0 ] = 60
             <kind>1</kind>
             <string>if (o_trap_7.image_index == 3) {
     if(damage == false) {
-        hp -= 10
+        global.player_hp -= 10
         damage = true
+        sprite_index = s_main_hit
     }
 }
-alarm [0] = 60
+alarm [0] = 30
 </string>
           </argument>
         </arguments>
@@ -386,11 +397,12 @@ alarm [0] = 60
           <argument>
             <kind>1</kind>
             <string>if (damage == false){
-    hp -= 10
+    global.player_hp-= 10
     damage = true
+    sprite_index = s_main_hit
  }
     
-alarm[0] = 60
+alarm[0] = 30
 </string>
           </argument>
         </arguments>
@@ -414,12 +426,37 @@ alarm[0] = 60
           <argument>
             <kind>1</kind>
             <string>if (damage == false){
-    hp -= 5
+    global.player_hp -= 5
     damage = true
+    sprite_index = s_main_hit
     }
 
-alarm[0] = 60
+alarm[0] = 0
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>sou_o_trap_3</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -443,11 +480,64 @@ alarm[0] = 60
             <kind>1</kind>
             <string>if (o_trap_1.image_index = 4) {
     if (damage == false) {
-        hp -= 10
+        global.player_hp -= 10
         damage = true
+        sprite_index = s_main_hit
     }
 }
-alarm [0] = 60
+alarm [0] = 30
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>sou_o_trap_1</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="o_cannon">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (damage == false) {
+    global.player_hp -= 10
+    damage = true
+    sprite_index = s_main_hit
+}
+alarm[0 ] = 30
 </string>
           </argument>
         </arguments>
@@ -471,12 +561,37 @@ alarm [0] = 60
           <argument>
             <kind>1</kind>
             <string>if (damage == false){
-    hp -= 10
+    global.player_hp -= 5
     damage = true
+    sprite_index = s_main_hit
     }
 
-alarm[0] = 60
+alarm[0] = 30
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>sou_o_trap_5</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -499,12 +614,37 @@ alarm[0] = 60
           <argument>
             <kind>1</kind>
             <string>if (damage == false){
-    hp -= 5
+    global.player_hp -= 5
     damage = true
-    }
+    sprite_index = s_main_hit
+}
     
-alarm[0] = 60
+alarm[0] = 30
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>sou_o_trap_5</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -527,12 +667,37 @@ alarm[0] = 60
           <argument>
             <kind>1</kind>
             <string>if (damage == false){
-    hp -= 5
+    global.player_hp -= 5
     damage = true
+    sprite_index = s_main_hit
 }
 
-alarm[0] = 60
+alarm[0] = 30
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>sou_o_trap_5</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
